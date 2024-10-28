@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+    - name: airnow_raw
+      description: "Historical and current observations data from the AirNow API. Database contains data for South Lake Tahoe."
+      database: key-polymer-434418-m6
+      schema: airnow_raw
+      tables: 
+        - name: airnow_hist_raw
+          description: '{{ doc("airnow_hist_raw") }}'
+          meta:
+            dagster:
+              asset_key: ["airnow_hist_raw"]
+        - name: airnow_raw_realtime
+          description: '{{ doc("airnow_raw_realtime") }}'
+          meta:
+            dagster:
+              asset_key: ["airnow_raw_realtime"]

@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: airnow_all_observations_analytics
+    description: "Model UNIONs historical and real-time AirNow observation data together. Table will then be used to create visualizations and air quality alert."
+   
+    columns:
+      - name: DateObserved
+        description: '{{ doc("DateObserved") }}'
+        tests:
+          - missing_dates
+      
+      - name: HourObserved
+        description: '{{ doc("HourObserved") }}'
+
+      - name: LocalTimeZone
+        description: '{{ doc("LocalTimeZone") }}'
+
+      - name: ReportingArea
+        description: '{{ doc("ReportingArea") }}'
+
+      - name: StateCode
+        description: '{{ doc("StateCode") }}'
+
+      - name: Latitude
+        description: '{{ doc("Latitude") }}'
+
+      - name: Longitude
+        description: '{{ doc("Longitude") }}'
+
+      - name: ParameterName
+        description: '{{ doc("ParameterName") }}'
+
+      - name: AQI
+        description: '{{ doc("AQI") }}'
+
+      - name: AQICategory
+        description: '{{ doc("AQICategory") }}'
+
+      - name: AQICategoryNumber
+        description: '{{ doc("AQICategoryNumber") }}'
+
+    tests:
+      - missing_aqi_measurements_daily

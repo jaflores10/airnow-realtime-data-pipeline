@@ -1,0 +1,82 @@
+version: 2
+
+models:
+  - name: airnow_hist_stage
+    description: "Converts raw columns to the correct data type from the historical observations table."
+   
+    columns:
+      - name: DateObserved
+        description: '{{ doc("DateObserved") }}'
+        tests:
+          - missing_dates
+      
+      - name: HourObserved
+        description: '{{ doc("HourObserved") }}'
+
+      - name: LocalTimeZone
+        description: '{{ doc("LocalTimeZone") }}'
+
+      - name: ReportingArea
+        description: '{{ doc("ReportingArea") }}'
+
+      - name: StateCode
+        description: '{{ doc("StateCode") }}'
+
+      - name: Latitude
+        description: '{{ doc("Latitude") }}'
+
+      - name: Longitude
+        description: '{{ doc("Longitude") }}'
+
+      - name: ParameterName
+        description: '{{ doc("ParameterName") }}'
+
+      - name: AQI
+        description: '{{ doc("AQI") }}'
+
+      - name: AQICategory
+        description: '{{ doc("AQICategory") }}'
+
+      - name: AQICategoryNumber
+        description: '{{ doc("AQICategoryNumber") }}'
+    
+
+  - name: airnow_realtime_stage
+    description: "Converts raw columns to the correct data type from the realtime observations table."
+    
+    columns:
+      - name: DataPullAt
+        description: '{{ doc("DataPulledAt") }}'
+
+      - name: HourObserved
+        description: '{{ doc("HourObserved") }}'
+
+      - name: LocalTimeZone
+        description: '{{ doc("LocalTimeZone") }}'
+
+      - name: ReportingArea
+        description: '{{ doc("ReportingArea") }}'
+
+      - name: StateCode
+        description: '{{ doc("StateCode") }}'
+
+      - name: Latitude
+        description: '{{ doc("Latitude") }}'
+
+      - name: Longitude
+        description: '{{ doc("Longitude") }}'
+
+      - name: ParameterName
+        description: '{{ doc("ParameterName") }}'
+
+      - name: AQI
+        description: '{{ doc("AQI") }}'
+
+      - name: AQICategory
+        description: '{{ doc("AQICategory") }}'
+
+      - name: AQICategoryNumber
+        description: '{{ doc("AQICategoryNumber") }}'
+    
+    tests:
+      - missing_aqi_measurements_hourly
