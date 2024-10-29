@@ -54,17 +54,16 @@ Tables:
 ### dbt Data Transformations
 The dbt models are used to clean and transform AirNow data. Key transformations include changing data types and appending historical and real-time data together to facilitate analysis and visualization.
 
-**Location**:
+**Location**: [airnow_dbt](https://github.com/jaflores10/airnow-realtime-data-pipeline/tree/main/airnow_dbt)
 
 **Key Files**
-- 'dbt_project.yml': dbt project configuration
-- 'schema.yml': specifies data loaded into airnow_raw by the API
-- Doc block:
-- 'models/': Contains dbt models for various stages of the data transformation cycle
-- 'macros/': Contains dbt tests to validate dbt models
+- `dbt_project.yml`: dbt project configuration
+- `schema.yml`: specifies data loaded into airnow_raw by the API
+- `models/`: Contains dbt models for various stages of the data transformation cycle and data definitions for tables/columns (doc blocks)
+- `macros/`: Contains dbt tests to validate dbt models
 
 ### Data Visualization
-The data is visualized using the Plotly package in Python. You may interactive with the visualizations below:
+The data is visualized using the Plotly package in Python. You may interactive with the visualizations here.
 
 ### Analysis Summary
 
@@ -72,7 +71,9 @@ The data is visualized using the Plotly package in Python. You may interactive w
 ### Email Notifications
 
 
-### Dagster Data Orchestration
+### Google Cloud Scheduler/Dagster Data Orchestration
+Google Cloud Scheduler is used to automatically pull real-time AQI observations twice every hour. The below screenshot details the configuration settings for the schedule:
+
 Dagster was integrated to orhestrate and manage the data pipelines for processing AirNow data.
 
 **Location**:
