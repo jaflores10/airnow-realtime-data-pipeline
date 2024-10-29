@@ -27,7 +27,9 @@ The modules below are organized to maintain clear separation of ELT components.
 ### Data Ingestion
 Handles the extraction and loading of AirNow data.
 
-**Location**: [python_scripts](https://github.com/jaflores10/airnow-realtime-data-pipeline/tree/main/python_scripts)
+**Location**: 
+- [Historical data pull script](https://github.com/jaflores10/airnow-realtime-data-pipeline/blob/main/python_scripts/prod_scripts/airnow_historical_data_script.ipynb)
+- [Real-time cloud function](https://github.com/jaflores10/airnow-realtime-data-pipeline/tree/main/python_scripts/cloud_functions/airnow_api_pull)
 
 ### BigQuery Data Warehouse
 The BigQuery data warehouse contains the below three schemas and applicable tables.
@@ -65,11 +67,19 @@ dbt models are used to clean and transform AirNow data. Key transformations incl
 - `macros/`: Contains dbt tests to validate dbt models
 
 ### Email Notifications Script
+The email notifications system allows a user to input their email and receive real-time, up-to-date AQI information for South Lake Tahoe, CA. Please feel free to follow the link [here](https://us-central1-key-polymer-434418-m6.cloudfunctions.net/airnow_email_notification) and recieve AQI measurements for PM2.5, PM10, and O3!
+
+*Please note, data schedules have been turned off to not exceed GCP credits.
+
+**Location**: [airnow_email_notification](https://github.com/jaflores10/airnow-realtime-data-pipeline/tree/main/python_scripts/cloud_functions/airnow_email_notification)
 
 ### Data Visualization
 The data is visualized using the Plotly package in Python. You may interactive with the visualizations [here](https://nbviewer.org/github/jaflores10/airnow-realtime-data-pipeline/blob/main/python_scripts/visualization_scripts/AirNow%20South%20Lake%20Tahoe%20Visualizations%20and%20Analysis.ipynb).
 
 ### Analysis Summary
+The above visualizations demonstrate air quality is typically good throughout South Lake Tahoe, CA! However, there are clear instances where air quality is extrememly bad. The area does not experience more typical air quality issues such as smog or inversion layers; however, the more recent large wildfires brought prolonged periods of poor air quality.
+
+Also, an analysis of gaining AQI measurement averages by day was done; however, the results did not yield much information. There are no specific days which yield better or worse air quality compared to others.
 
 ### Google Cloud Scheduler/Dagster Data Orchestration
 Google Cloud Scheduler is used to automatically pull real-time AQI observations twice every hour from the API. The below screenshot details the configuration settings for the schedule:
@@ -83,6 +93,9 @@ Dagster was integrated to orhestrate and manage the dbt models for transforming 
 **Key files**
 - `definitions.py`: This file contains the core configuration for Dagster, defining the repository that includes assets, jobs, and schedules
 - `assests.py`: This file is used to define data assets (python scripts, dbt models, etc.)
+
+The below DAG demonstrates how assets are connected, successful materialization, and scheduled to regulary run dbt models.
+![airnow_dag](https://github.com/jaflores10/airnow-realtime-data-pipeline/blob/main/airnow_dbt/airnow_dagster/dag_screenshots/airnow_dag.png)
 
 ## 🚀 Getting Started
 ### Prerequisites
