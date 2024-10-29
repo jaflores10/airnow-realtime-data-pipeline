@@ -73,6 +73,7 @@ The data is visualized using the Plotly package in Python. You may interactive w
 
 ### Google Cloud Scheduler/Dagster Data Orchestration
 Google Cloud Scheduler is used to automatically pull real-time AQI observations twice every hour. The below screenshot details the configuration settings for the schedule:
+
 ![Cloud Scheduler Configurations](https://github.com/jaflores10/airnow-realtime-data-pipeline/blob/main/gcp/gcp_airnow_api_cloud_schedulerpng.png)
 
 Dagster was integrated to orhestrate and manage the data pipelines for processing AirNow data.
