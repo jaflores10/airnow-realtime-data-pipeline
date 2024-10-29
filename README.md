@@ -52,7 +52,7 @@ Tables:
   - airnow_analytics_realtime
 
 ### dbt Data Transformations
-The dbt models are used to clean and transform AirNow data. Key transformations include changing data types and appending historical and real-time data together to facilitate analysis and visualization.
+dbt models are used to clean and transform AirNow data. Key transformations include changing data types and appending historical and real-time data together to facilitate analysis and visualization.
 
 **Location**: [airnow_dbt](https://github.com/jaflores10/airnow-realtime-data-pipeline/tree/main/airnow_dbt)
 
