@@ -107,7 +107,7 @@ Ensure the following accounts and tools are set up before beginning this project
 #### Tools
 - **VS Code or other IDE**: Allows for easy code editing. [Download VSCode](https://code.visualstudio.com/download)
 - **Python**: [Download Python](https://www.python.org/downloads/)
-- **Google Cloud Platform***: [Obtain GCP trial](https://cloud.google.com/?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-e-dr-1707554&utm_content=text-ad-none-any-DEV_c-CRE_665665924744-ADGP_Hybrid+%7C+BKWS+-+MIX+%7C+Txt-Google+Cloud-General+GCP-KWID_43700077224933103-kwd-527294295527&utm_term=KW_gcp%20trial-ST_gcp+trial&gad_source=1&gclid=Cj0KCQjw7Py4BhCbARIsAMMx-_Iiy_aEt9g1-YYZWY9hNWe-KRjlaojOsz0hFvp58KpDCru_yEawfPwaAh5LEALw_wcB&gclsrc=aw.ds)
+- **Google Cloud Platform**: [Obtain GCP trial](https://cloud.google.com/?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-e-dr-1707554&utm_content=text-ad-none-any-DEV_c-CRE_665665924744-ADGP_Hybrid+%7C+BKWS+-+MIX+%7C+Txt-Google+Cloud-General+GCP-KWID_43700077224933103-kwd-527294295527&utm_term=KW_gcp%20trial-ST_gcp+trial&gad_source=1&gclid=Cj0KCQjw7Py4BhCbARIsAMMx-_Iiy_aEt9g1-YYZWY9hNWe-KRjlaojOsz0hFvp58KpDCru_yEawfPwaAh5LEALw_wcB&gclsrc=aw.ds)
 - **dbt Core**: [Install dbt Core](https://github.com/dbt-labs/dbt-core)
 - **Dagster**: [Install Dagster](https://github.com/dagster-io/dagster)
 
