@@ -77,9 +77,9 @@ The email notifications system allows a user to input their email and receive re
 The data is visualized using the Plotly package in Python. You may interactive with the visualizations [here](https://nbviewer.org/github/jaflores10/airnow-realtime-data-pipeline/blob/main/python_scripts/visualization_scripts/AirNow%20South%20Lake%20Tahoe%20Visualizations%20and%20Analysis.ipynb).
 
 ### Analysis Summary
-The above visualizations demonstrate air quality is typically good throughout South Lake Tahoe, CA! However, there are clear instances where air quality is extrememly bad. The area does not experience more typical air quality issues such as smog or inversion layers; however, the more recent large wildfires brought prolonged periods of poor air quality.
+The above visualizations demonstrate air quality is typically good throughout South Lake Tahoe, CA! However, there are instances where air quality is extrememly bad. The area does not experience typical air quality issues such as smog or inversion layers often, but more recent large wildfires brought prolonged periods of poor air quality.
 
-Also, an analysis of gaining AQI measurement averages by day was done; however, the results did not yield much information. There are no specific days which yield better or worse air quality compared to others.
+Also, an analysis of AQI measurement averages by day was done. The results indicated there are no specific days which yield better or worse air quality compared to others.
 
 ### Google Cloud Scheduler/Dagster Data Orchestration
 Google Cloud Scheduler is used to automatically pull real-time AQI observations twice every hour from the API. The below screenshot details the configuration settings for the schedule:
