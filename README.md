@@ -67,7 +67,7 @@ dbt models are used to clean and transform AirNow data. Key transformations incl
 ### Email Notifications Script
 
 ### Data Visualization
-The data is visualized using the Plotly package in Python. You may interactive with the visualizations here.
+The data is visualized using the Plotly package in Python. You may interactive with the visualizations [here](https://nbviewer.org/github/jaflores10/airnow-realtime-data-pipeline/blob/main/python_scripts/visualization_scripts/AirNow%20South%20Lake%20Tahoe%20Visualizations%20and%20Analysis.ipynb).
 
 ### Analysis Summary
 
