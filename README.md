@@ -2,6 +2,8 @@
 ## 📋 Overview
 The goal of the AirNow air quality index (AQI) data pipeline, notification system, and analysis project is to implement a modern data stack with cloud platforms/tools. The project also implements an email notification system to provide a user real-time AQI measurements and an analysis of historical and real-time AQI observations. This project is designed to help professionals seeking to enhance their data ingestion, transformation, and automation workflows for complete and accurate data operational and analytical purposes.
 
+Please note, given API limitations the data is limited to South Lake Tahoe, CA.
+
 The following tools/technologies are used for data ingestion, warehousing, transformation, visualization, orchestration:
 - Data ingestion
   - Python scripts (Cloud Functions) ✒️
