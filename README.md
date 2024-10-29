@@ -25,7 +25,7 @@ The modules below are organized to maintain clear separation of ELT components.
 ### Data Ingestion
 Handles the extraction and loading of AirNow data.
 
-**Location**:
+**Location**: [python_scripts](https://github.com/jaflores10/airnow-realtime-data-pipeline/tree/main/python_scripts)
 
 ### BigQuery Data Warehouse
 The BigQuery data warehouse contains the below three schemas and applicable tables.
