@@ -17,7 +17,7 @@ The following tools/technologies are used for data ingestion, warehousing, trans
 
 AirNow API documentation may be obtained [here](https://docs.airnowapi.org/).
 
-Inspiration for this project was drawn from my time living in California. Air quality has been an issue throughout the state for decades and the increasing rate of wildfires is causing more and more people to experience poor air quality, which limits time outdoors.
+Inspiration for this project was drawn from my time living in California. Air quality has been an issue throughout the state for decades and the increasing rate of wildfires is causing more and more people to experience poor air quality.
 
 ## 💠 Modules
 The modules below are organized to maintain clear separation of ELT components.
@@ -62,17 +62,15 @@ dbt models are used to clean and transform AirNow data. Key transformations incl
 - `models/`: Contains dbt models for various stages of the data transformation cycle and data definitions for tables/columns (doc blocks)
 - `macros/`: Contains dbt tests to validate dbt models
 
+### Email Notifications Script
+
 ### Data Visualization
 The data is visualized using the Plotly package in Python. You may interactive with the visualizations here.
 
 ### Analysis Summary
 
-
-### Email Notifications Script
-
-
 ### Google Cloud Scheduler/Dagster Data Orchestration
-Google Cloud Scheduler is used to automatically pull real-time AQI observations twice every hour. The below screenshot details the configuration settings for the schedule:
+Google Cloud Scheduler is used to automatically pull real-time AQI observations twice every hour from the API. The below screenshot details the configuration settings for the schedule:
 
 ![Cloud Scheduler Configurations](https://github.com/jaflores10/airnow-realtime-data-pipeline/blob/main/gcp/gcp_airnow_api_cloud_schedulerpng.png)
 
