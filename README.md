@@ -28,8 +28,8 @@ The modules below are organized to maintain clear separation of ELT components.
 Handles the extraction and loading of AirNow data.
 
 **Location**: 
-- [Historical data pull script](https://github.com/jaflores10/airnow-realtime-data-pipeline/blob/main/python_scripts/prod_scripts/airnow_historical_data_script.ipynb)
-- [Real-time cloud function](https://github.com/jaflores10/airnow-realtime-data-pipeline/tree/main/python_scripts/cloud_functions/airnow_api_pull)
+- [Historical observations data pull script](https://github.com/jaflores10/airnow-realtime-data-pipeline/blob/main/python_scripts/prod_scripts/airnow_historical_data_script.ipynb)
+- [Real-time observations cloud function](https://github.com/jaflores10/airnow-realtime-data-pipeline/tree/main/python_scripts/cloud_functions/airnow_api_pull)
 
 ### BigQuery Data Warehouse
 The BigQuery data warehouse contains the below three schemas and applicable tables.
