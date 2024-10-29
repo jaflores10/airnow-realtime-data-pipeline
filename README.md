@@ -68,19 +68,20 @@ The data is visualized using the Plotly package in Python. You may interactive w
 ### Analysis Summary
 
 
-### Email Notifications
+### Email Notifications Script
 
 
 ### Google Cloud Scheduler/Dagster Data Orchestration
 Google Cloud Scheduler is used to automatically pull real-time AQI observations twice every hour. The below screenshot details the configuration settings for the schedule:
+![Cloud Scheduler Configurations](https://github.com/jaflores10/airnow-realtime-data-pipeline/blob/main/gcp/gcp_airnow_api_cloud_schedulerpng.png)
 
 Dagster was integrated to orhestrate and manage the data pipelines for processing AirNow data.
 
-**Location**:
+**Location**: [airnow_dagster](https://github.com/jaflores10/airnow-realtime-data-pipeline/tree/main/airnow_dbt/airnow_dagster)
 
 **Key files**
 - `definitions.py`: This file contains the core configuration for Dagster, defining the repository that includes assets, jobs, and schedules
-- 'assests.py': This file is used to define data assets (python scripts, dbt models, etc.)
+- `assests.py`: This file is used to define data assets (python scripts, dbt models, etc.)
 
 ## 🚀 Getting Started
 ### Prerequisites
@@ -90,7 +91,7 @@ Ensure the following accounts and tools are set up before beginning this project
 - **GitHub**: For version control and collaboration.
 
 #### Tools
-- **VS Code or other IDE**: Allows for easy code editing. [Download VS Code](https://code.visualstudio.com/download)
+- **VS Code or other IDE**: Allows for easy code editing. [Download VSCode](https://code.visualstudio.com/download)
 - **Python**: [Download Python](https://www.python.org/downloads/)
 - **Google Cloud Platform***: [Obtain GCP trial](https://cloud.google.com/?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-e-dr-1707554&utm_content=text-ad-none-any-DEV_c-CRE_665665924744-ADGP_Hybrid+%7C+BKWS+-+MIX+%7C+Txt-Google+Cloud-General+GCP-KWID_43700077224933103-kwd-527294295527&utm_term=KW_gcp%20trial-ST_gcp+trial&gad_source=1&gclid=Cj0KCQjw7Py4BhCbARIsAMMx-_Iiy_aEt9g1-YYZWY9hNWe-KRjlaojOsz0hFvp58KpDCru_yEawfPwaAh5LEALw_wcB&gclsrc=aw.ds)
 - **dbt Core**: [Install dbt Core](https://github.com/dbt-labs/dbt-core)
@@ -109,6 +110,4 @@ To get started with this project, follow these steps:
 Contributions are welcome! Please submit a pull request or open an issue to discuss changes.
 
 ## Credits
-- **Data Source**: NFIRS
-- **Image**: Courtesy of NFIRS
-- **Tools and Technologies**: Python, DuckDB, dbt, Tableau, Dagster
+- **Tools and Technologies**: Python, GCP, dbt, Tableau, Dagster
